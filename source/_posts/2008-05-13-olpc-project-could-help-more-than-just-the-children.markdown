@@ -18,7 +18,7 @@ indicators. The higher the index score, the more unstable the country is.
 Comparing the index score to the penetration rate of internet usage based on
 population yields interesting results:
 
-![](http://jordanmessina.com/images/graph1.jpg)
+![](http://jordanmessina.com/images/2008-05-13-olpc-project-could-help-more-than-just-the-children/graph1.jpg)
 
 One potential argument could be that the states(countries) with low index
 scores are most likely states with poor economies, which would obviously
@@ -33,7 +33,7 @@ By comparing countries only with economies promising enough to sustain the
 costs of the infrastructures needed for internet, we get a better picture of
 how the internet truly effects ones stability.
 
-![](http://jordanmessina.com/images/graph2.jpg) 
+![](http://jordanmessina.com/images/2008-05-13-olpc-project-could-help-more-than-just-the-children/graph2.jpg) 
 
 As we can see, the upward trend still exists with countries with similar economies. 
 Efforts by groups like the OLPC Association could end up affecting more than just 
@@ -51,5 +51,5 @@ everyday and where we'd be without them. To say that this couldn't help a
 failing state pick itself off the ground would be absurd.
 
 All data used for this can be seen
-[here](http://jordanmessina.com/images/data.jpg)
+[here](http://jordanmessina.com/images/2008-05-13-olpc-project-could-help-more-than-just-the-children/data.jpg)
 
