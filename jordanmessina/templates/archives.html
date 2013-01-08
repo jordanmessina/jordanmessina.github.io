@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load markup %}
+{% block content %}
+    <div class="row">
+        <div class="span6 offset3">
+            <h3>Archives</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6 offset3">
+            {% for post in posts %}
+                <div>{{ post.meta.date|date:"M d, Y" }}</div>
+                <div><a href="{{ post.meta.url }}">{{ post.meta.title }}</a></div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

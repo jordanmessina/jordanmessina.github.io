@@ -1,0 +1,12 @@
+/
+/about
+/archives
+/2012/12/17/if-theres-any-sign-you-shouldnt-do-something-its-the-dead-body-next-to-you
+/2011/11/15/install-any-app-on-the-kindle-fire
+/2010/10/06/for-those-looking-for-an-easy-rackspace-cloud-files-folder-sync-solution
+/2010/08/20/im-calling-myself-out
+/2010/06/12/django-allow-users-to-log-in-using-email-rather-than-username
+/2010/05/24/django-1-2-csrf-verification-failed
+/2009/10/11/illegal-streaming
+/2008/05/13/olpc-project-could-help-more-than-just-the-children
+/2008/04/30/we-forgot-to-pay-the-power-bill

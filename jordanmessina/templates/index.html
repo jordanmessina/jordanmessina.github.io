@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load markup %}
+{% block content %}
+            <div class="row">
+                <div class="span8 offset2" style="text-align:center;">
+                    <h1 style="font-size: 30.0px;">
+                        <a href="{{ post.meta.url }}">{{ post.meta.title }}</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8 offset2" style="text-align:center;">
+                    <h3 style="font-size: 12px;color: #999;">
+                        <i>This was written on {{ post.meta.date|date:"M d, Y" }}</i>
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6 offset3">
+                    <p>
+                        {{ post.post|markdown }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6 offset3" style="text-align: center;">
+                    <h2><a href="/archives">Older Posts</a>
+                </div>
+            </div>
+{% endblock %}
