@@ -3,7 +3,7 @@ author: Jordan Messina
 date: '2012-01-17'
 layout: post
 comments: true
-slug: take-the-leap 
+slug: becoming-my-own-boss
 status: publish
 title: Becoming My Own Boss
 ---
