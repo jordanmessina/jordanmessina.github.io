@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="js flexbox hashchange rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent wf-actadisplay-n7-active wf-actadisplay-n4-active wf-freightsanspro-n4-active wf-freightsanspro-n7-active wf-keplerstd-i4-active wf-keplerstd-n7-active wf-keplerstd-n4-active wf-keplerstd-n3-active wf-sourcecodepro-n4-active wf-active">
+    <head>
+        
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0">
+            <meta name="viewport" id="viewport-iphone5" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+            <meta property="og:site_name" content="Jordan Has a Blog - Jordan Messina's thoughts">
+            <title>Jordan Has a Blog</title>
+            <link href="/favicon.png" rel="icon">
+            <link href="/css/bootstrap.min.css" rel="stylesheet">
+            <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+            <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+            <link href="/css/site.css" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row" style="margin-bottom: 70px;margin-top:10px;">
+                <div class="span6 offset3">
+                    <div style="text-align: center;">
+                        <a href="/archives">Jordan Has a Blog</a> - my brain on the web.
+                    </div>
+                </div>
+                <div class="span3">
+                    <div style="float:right;">
+                        <a href="/about">?</a>&nbsp;
+                        <a href="http://github.com/jordanmessina"><img height="25px" width="25px" src="/img/github.png" border="0"></a>
+                        <a href="http://twitter.com/jordanmessina"><img height="25px" width="25px" src="/img/twitter.png" border="0"></a>
+                        <a href="http://linkedin.com/in/jordanmessina"><img height="25px" width="25px" src="/img/linkedin.png" border="0"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="span8 offset2" style="text-align:center;">
+                    <h1 style="font-size: 30.0px;">
+                        Django 1.2 - CSRF verification failed. Request aborted.
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8 offset2" style="text-align:center;">
+                    <h3 style="font-size: 12px;color: #999;">
+                        <i>This was written on May 24, 2010</i>
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6 offset3">
+                    <p>
+                        <p>I was getting this 403 error today while attempting to make a POST request to
+a view: </p>
+<blockquote>
+<p>403 Forbidden</p>
+<p>CSRF verification failed. Request aborted.</p>
+<p>Help Reason given for failure:</p>
+<p>CSRF cookie not set.</p>
+</blockquote>
+<p><strong>Edit 10/29/2010</strong>
+I've modified this post to only contain the proper way of resolving the issue. You can read about Cross Site Request Forgeries <a href="http://www.squarefree.com/securitytips/web-developers.html#CSRF">here</a> and Django's protection mechanisms <a href="https://docs.djangoproject.com/en/dev/ref/contrib/csrf/">here</a> </p>
+<p>To resolve the 403 issue, you want to add the csrf_token template tag within your form somewhere. This adds a hidden div with the value of the input as the csrf token:
+<code>html anything.html
+&lt;form action="..." method="POST"&gt;
+    {% csrf_token %}
+    ...
+&lt;/form&gt;</code></p>
+<p>If you'd like to not protect against CSRF with Django's built in mechanisms, use the csrf_exempt decorator:</p>
+<p><code>python views.py
+from django.views.decorators.csrf import csrf_exempt 
+... 
+@csrf_exempt 
+def my_func(request):
+    ...</code></p>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6 offset3">
+                    <hr class="bs-docs-separator">
+                    <h3 style="font-size: 12px;color: #999;text-align:center;">
+                        <i>This was written on May 24, 2010</i>
+                    </h3>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'jordanhasablog'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+                    <hr class="bs-docs-separator">
+                </div>
+            </div>
+
+        </div>
+        <script src="/js/jquery-1.8.2.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

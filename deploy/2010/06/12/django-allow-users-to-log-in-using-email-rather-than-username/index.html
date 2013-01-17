@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="js flexbox hashchange rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent wf-actadisplay-n7-active wf-actadisplay-n4-active wf-freightsanspro-n4-active wf-freightsanspro-n7-active wf-keplerstd-i4-active wf-keplerstd-n7-active wf-keplerstd-n4-active wf-keplerstd-n3-active wf-sourcecodepro-n4-active wf-active">
+    <head>
+        
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0">
+            <meta name="viewport" id="viewport-iphone5" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+            <meta property="og:site_name" content="Jordan Has a Blog - Jordan Messina's thoughts">
+            <title>Jordan Has a Blog</title>
+            <link href="/favicon.png" rel="icon">
+            <link href="/css/bootstrap.min.css" rel="stylesheet">
+            <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+            <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+            <link href="/css/site.css" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row" style="margin-bottom: 70px;margin-top:10px;">
+                <div class="span6 offset3">
+                    <div style="text-align: center;">
+                        <a href="/archives">Jordan Has a Blog</a> - my brain on the web.
+                    </div>
+                </div>
+                <div class="span3">
+                    <div style="float:right;">
+                        <a href="/about">?</a>&nbsp;
+                        <a href="http://github.com/jordanmessina"><img height="25px" width="25px" src="/img/github.png" border="0"></a>
+                        <a href="http://twitter.com/jordanmessina"><img height="25px" width="25px" src="/img/twitter.png" border="0"></a>
+                        <a href="http://linkedin.com/in/jordanmessina"><img height="25px" width="25px" src="/img/linkedin.png" border="0"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="span8 offset2" style="text-align:center;">
+                    <h1 style="font-size: 30.0px;">
+                        Django - Allow users to log in using email rather than username
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8 offset2" style="text-align:center;">
+                    <h3 style="font-size: 12px;color: #999;">
+                        <i>This was written on Jun 12, 2010</i>
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6 offset3">
+                    <p>
+                        <p>One of the annoying things about Django is that it doesn't allow logins via
+email out of the box if you're using their built-in user authentication . You
+must create your own authentication backend in order to accomplish this.
+However, one of the things I love about Django is the ability to create
+authentication backends without too much of a headache. This comes in handy
+when dealing with things like allowing users to log in via Twitter, Facebook
+Connect, any OpenID providers, or allowing them to login via email and
+password.</p>
+<p>Django authentication backends are quite simple, essentially whenever you call
+the <code>django.contrib.auth.authenticate()</code> function, Django uses the
+authenticate method in any of the classes specified by the
+<code>AUTHENTICATION_BACKENDS</code> tuple set in your settings.py. If one of the classes
+fails to authenticate the user, Django moves on to the next one until either
+one successfully returns a user object or there are no other backends to
+attempt, in which case it results in a failed login. A very simple
+authentication backend which allows users to login via email rather than
+username is the following code in backends.py:</p>
+<pre><code>from django.conf import settings 
+from django.contrib.auth.models import User
+
+class EmailModelBackend(object): 
+    def authenticate(self, username=None, password=None): 
+        try: 
+            user = User.objects.get(email=username)
+            if user.check_password(password): 
+                return user 
+        except User.DoesNotExist: 
+            return None
+
+    def get_user(self, user_id): 
+        try: 
+            return User.objects.get(pk=user_id)
+        except User.DoesNotExist:
+            return None
+</code></pre>
+<p>And you simply need to add to your settings.py: </p>
+<pre><code>AUTHENTICATION_BACKENDS = (
+    'path.to.this.backends.EmailModelBackend',
+    'django.contrib.auth.backends.ModelBackend', 
+)
+</code></pre>
+<p>I generally place my backends in whatever app I create to store extra user
+info, but you can put it anywhere, just make sure it's in your PYTHONPATH.</p>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6 offset3">
+                    <hr class="bs-docs-separator">
+                    <h3 style="font-size: 12px;color: #999;text-align:center;">
+                        <i>This was written on Jun 12, 2010</i>
+                    </h3>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'jordanhasablog'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+                    <hr class="bs-docs-separator">
+                </div>
+            </div>
+
+        </div>
+        <script src="/js/jquery-1.8.2.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

@@ -1,6 +1,5 @@
 *.DS_Store
 *.py[cod]
-deploy
 
 # C extensions
 *.so
