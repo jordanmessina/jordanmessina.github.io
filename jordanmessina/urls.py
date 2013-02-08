@@ -20,7 +20,7 @@ if settings.DEBUG:
 
 urlpatterns += patterns('',
     url(r'^$', 'jordanmessina.views.index'),
-    url(r'^archives$', 'jordanmessina.views.archives'),
-    url(r'^about$', direct_to_template, {'template': 'about.html'}),
-    url(r'^(?P<path>.*)$', 'jordanmessina.views.load_post'),
+    url(r'^archives/$', 'jordanmessina.views.archives'),
+    url(r'^about/$', direct_to_template, {'template': 'about.html'}),
+    url(r'^(?P<path>.*)/$', 'jordanmessina.views.load_post'),
 )
