@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-4330805-1']);
+          _gaq.push(['_setDomainName', 'jordanmessina.com']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+        </script>
+    </head>
+    <body>
+        <div class="site">
+            <div class="block-text">
+                <a href="/" class="imp">Jordan Messina</a> is a developer who lives in <span class="loc">San Francisco, California</span> . He is a founder at <a href="http://wizzywig.io" class="wiz">WizzyWig</a>, and you can find him on <a href="http://github.com/jordanmessina" class="con">github</a> and <a href="http://twitter.com/jordanmessina" class="twi">twitter</a> .
+            </div>
+     
+                {{ content }}
+
+            <div class="footer">
+                <div class="block-text block-text-small">
+                  <span class="imp">Read his posts:</span> 
+                  {% for post in site.posts %}<a class="p{{ post.popularity }}" href="{{ post.url }}">{{ post.title }}</a> . {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
