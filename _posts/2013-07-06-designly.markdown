@@ -1,0 +1,50 @@
+---
+author: Jordan Messina
+date: '2013-07-06'
+layout: post
+comments: true
+slug: designly
+status: publish
+popularity: 2
+title: Designly
+---
+
+I moved out to San Francisco about a month ago to work with some friends on a new company. That company is Designly, and we're excited to announce that we're launching an Alpha version of the service. 
+
+Desingly is an easy-to-use, drag and drop website creator. We think making a website should be as simple as making a word document. Users shouldn't have to worry about things like where to host, configurations, bandwidth, etc. You should simply be able to drag and drop elements, change some text, add photos, and publish to the internet, all within minutes of signing up. That's what Designly is. Here's a short video showing some of the features.
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/z9Wx7zqljRw" frameborder="0" allowfullscreen></iframe>
+
+We're going to send out invites soon, and we want to do a little more for those willing to use the service in its alpha stages. Here's what we're thinking:
+
+ 
+- One of our designers will make you a completely customized site. Seriously, it's going to look amazing thanks to <a href="http://nathanspeller.heroku.com" target="_blank">this guy</a>.
+
+
+- If you already have a site, we can convert it for you (and probably spruce it up a bit).
+
+ 
+- Once we launch to the public, we'll give you free service for 6 months. Though we haven't picked a price for the service, we can promise it will be no more than $20/mo.
+
+ 
+We're doing this for the first 100 users, so if you're interested, add your email to the list below and I'll be in touch within a couple of hours!
+
+<link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="http://quotab.us6.list-manage.com/subscribe/post?u=69fb41422a93005ad702041a2&amp;id=992725d210" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<h2>Designly Alpha</h2>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address </label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
