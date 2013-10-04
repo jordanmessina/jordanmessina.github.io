@@ -62,20 +62,32 @@ p{
   color: #2ecc71;
 }
 
-.block-text .wiz{
+.block-text .twi{
   color: #e74c3c;
 }
 
-.block-text .con{
+.block-text .git{
   color: #f1c40f;
 }
 
-.block-text .twi{
-  color: #3498db;
+.block-text .org{
+  color: #F06627;
 }
 
-.block-text .git{
-  color: #1abc9c;
+.block-text .alp{
+  color: #157CC7;
+}
+
+.block-text .iz{
+  color: #46A293;
+}
+
+.block-text .dznly{
+  color: #815392;
+}
+
+.block-text .yc{
+  color: #ff6600;
 }
 
 .p2{
