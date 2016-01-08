@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/jordanmessina
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://jordanmessina.com
+  * I am jordanmessina (https://keybase.io/jordanmessina) on keybase.
+  * I have a public key with fingerprint 0191 40A8 31A2 CA6E 209D  647E A9B1 BAAB AAAC E11F
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101ef2d01b49d54f0be1c0bf8083c424eec3ffbfa3f79c678a6efdb852a185cd09f0a",
+            "fingerprint": "019140a831a2ca6e209d647ea9b1baabaaace11f",
+            "host": "keybase.io",
+            "key_id": "a9b1baabaaace11f",
+            "kid": "0101ef2d01b49d54f0be1c0bf8083c424eec3ffbfa3f79c678a6efdb852a185cd09f0a",
+            "uid": "9cf79e80a8c81542334da9f31f32a600",
+            "username": "jordanmessina"
+        },
+        "service": {
+            "hostname": "jordanmessina.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1452265475,
+    "expire_in": 157680000,
+    "prev": "35f9d235f8c1edf84f48ec0d3ba14aef317e45d7bc66c59ba7dc428cd5cece62",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.49
+Comment: https://keybase.io/crypto
+
+yMIlAnicrZJbSBRRGMd328rNstIKiu5jEMFmc+Y+hnQvCy2SkERtPXMu26Q7s83u
+aiL1YIGV2R26+tBFxJfaIjMKsjXp4gWUbi8V0f1CEBREF6wzUm89dhjOYeb8/7/5
+fx9fZ5rPk+qdkZl41Zqfd8fbnTwV9xTu6/PVcIaNq7nsGq6cDB6kApNoLFhuYi6b
+4wEPCBUwDwxJx7JEeYMAxBtU4zURSYJECBIpNSgUqaojRdWgQig2NFmAQJMR5nXK
+Qy7AUdMKESfimFZsEKsDiYeaCKCAmEPgdaxIKoG6AQwI2QMRAYAy40Y76jpYOANG
+SZZps2/sJTgY7x/6/5w7PojTEVMRjSVGGpAlQRQlDHUqAioKUOF5VxgljgXDhKk3
+2Q6GVphEo6YFua0Bjl1Vmoi43XXL+ZcsC9lhRok4dsxGdgW73hiLRbJdd6w64sqr
+iBH8AwoapoVZQ5mhkjhR07a4bMCUKGa6ZCDJgqDIkioHOLIlYjokaLoKWVU0ni33
+N6SSIUWZ6lhgu4YAwVSTqKQRxGPRgECChNWnEknGqoEUBcm6AVXMeqchLCOCiCJw
+bmmbLZuxRZYThhgzaoYsGIs7hNvacaNkqMeb6hk+bIg7aZ7UEWP/zl/9nJRfxWU9
+tSvie1reJnOaO7v8B/tDKaGBZ+WLpO6CeRW3G8+9zHg7NOEvbfrpO9scL3s04dDS
+oy9aTqxJ31D2FfCzVsvo09fwvuK2md+Otx3wP+m9SR83Jubv8tX+GO1LH1JX+CDx
+/NIMevpK2hOuS5jyMHf9pM3W4tL+pp19PQ1LR9XfO343bb//8P2cM3m970+u1Nq3
+HekLrt1ZFFiY9x4G8j/cm1vUOFC7N5lUrhW9KyGP/SUpyQzZP2365XDrku27vyxb
+rqa9afrsTX6s/J75Obf+R3Nx3sn2Ma+d8+N3WAsu1B0bdv15Fajb1j9wcepHs+Fq
+YvLTceqqtpGHC2Y35N4qWNcx8TdXPUmU
+=sBkW
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jordanmessina
+
+==================================================================
+
